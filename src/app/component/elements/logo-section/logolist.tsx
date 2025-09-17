@@ -45,34 +45,36 @@ export const LogoListSection: React.FC<LogoListSectionProps> = ({
   }, [activeIndex]);
 
   return (
-    <div className="text-center py-[75px] px-[75px] border-t border-[#ffffff3d]">
-      <p className="text-white text-[20px] mb-[45px]">{subtitle}</p>
-      <ul className="flex justify-center  ">
-        {visibleLogos.map((logo, index) => (
-          <li
-            key={`${logo.src}-${index}`}
-            className=" w-full max-w-[300px] h-[200px] flex items-center p-[10px_25px] justify-center border border-white"
-          >
-            <div
-              className={`transition-all duration-700 flex items-center justify-center ease-in-out ${
-                index === activeIndex
-                  ? "blur-sm opacity-70"
-                  : "blur-0 opacity-100"
-              }`}
+    <div className="flex flex-col items-center justify-center  border-t border-[#ffffff3d]">
+      <div className="text-center py-[75px] container">
+        <p className="text-white text-[20px] mb-[45px]">{subtitle}</p>
+        <ul className="flex justify-center  ">
+          {visibleLogos.map((logo, index) => (
+            <li
+              key={`${logo.src}-${index}`}
+              className=" w-full max-w-[300px] h-[200px] flex items-center p-[10px_25px] justify-center border border-white"
             >
-              <Image
-                src={logo.src}
-                alt={logo.alt || `Logo ${index + 1}`}
-                width={100}
-                height={50}
-                className="w-[150px] h-[50px] object-contain"
-                placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjZGRkIi8+"
-              />
-            </div>
-          </li>
-        ))}
-      </ul>
+              <div
+                className={`transition-all duration-700 flex items-center justify-center ease-in-out ${
+                  index === activeIndex
+                    ? "blur-sm opacity-70"
+                    : "blur-0 opacity-100"
+                }`}
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt || `Logo ${index + 1}`}
+                  width={100}
+                  height={50}
+                  className="w-[150px] h-[50px] object-contain"
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjZGRkIi8+"
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

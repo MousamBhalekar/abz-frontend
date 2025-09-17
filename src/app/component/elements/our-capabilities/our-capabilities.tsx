@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 type OurCapabilitiesProps = {
   title: string;
+  desc: string;
   items: string[];
   rightContent?: React.ReactNode; // e.g., image, illustration, etc.
 };
@@ -11,25 +12,35 @@ export const OurCapabilities: React.FC<OurCapabilitiesProps> = ({
   title,
   items,
   rightContent,
+  desc,
 }) => {
+  const [activeIdx, setActiveIdx] = useState(0);
   return (
-    <div className="py-[75px] px-[75px]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4">{title}</h2>
-          <ul className="space-y-3">
-            {items.map((item, idx) => (
-              <li key={idx} className="flex items-center gap-2 text-gray-700">
-                <span className="h-2 w-2 bg-blue-500 rounded-full"></span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className="flex items-center justify-center">
+      <div className="py-[75px] container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left Content */}
+          <div>
+            <h2 className="text-5xl">{title}</h2>
+            <p className="md:w-2/3 my-4 text-2xl">{desc}</p>
+            <ul className="space-y-4 mt-5">
+              {items.map((item, idx) => (
+                <li
+                  key={idx}
+                  onClick={() => setActiveIdx(idx)}
+                  className={`flex items-center cursor-pointer w-fit gap-2 text-4xl transition-colors duration-200
+                    ${activeIdx === idx ? "text-white font-bold" : "text-gray-700"}
+                  `}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Right Content (optional) */}
-        <div className="flex justify-center">{rightContent}</div>
+          {/* Right Content (optional) */}
+          <div className="flex justify-center">{rightContent}</div>
+        </div>
       </div>
     </div>
   );
