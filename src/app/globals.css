@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+    --font-urbanist-sans: 'Urbanist', sans-serif;
 }
 
 @theme inline {
@@ -22,5 +23,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-urbanist-sans);
+}
+
+h1,h2,h3,h4,h5{
+  font-family: var(--font-gilgan);
 }
