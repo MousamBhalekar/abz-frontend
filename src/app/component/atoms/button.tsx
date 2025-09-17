@@ -10,7 +10,7 @@ type ButtonProps = {
   disabled?: boolean;
   variant?: "solid" | "outline"; // solid or outline
   href?: string; // optional URL
-  icon?:React.ReactNode;
+  icon?: React.ReactNode;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   variant = "solid",
   href,
-  icon
+  icon,
 }) => {
   const baseClasses =
     "flex items-center  gap-2 text-[16px] rounded-[0]  transition-all duration-500 ease-in-out group ";
@@ -37,27 +37,31 @@ export const Button: React.FC<ButtonProps> = ({
     return (
       <Link href={href} className={classes}>
         {children}
-        {
-            icon &&
-            <span className="border-l border-[#2C465D] flex items-center justify-center h-full ml-4 p-[5px_15px]"> {icon}</span>
-     
-        }
-   
+        {icon && (
+          <span className="border-l border-[#2C465D] flex items-center justify-center h-full ml-4 p-[5px_15px]">
+            {" "}
+            {icon}
+          </span>
+        )}
       </Link>
     );
   }
 
   // render as button
   return (
-    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={classes}
+    >
       {children}
-        {
-            icon &&
-            <span className="border-l border-[#2C465D] group-hover:border-[#6495ED] flex items-center justify-center h-full ml-4 p-[5px_15px]"> {icon}</span>
-     
-        }
-   
-     
+      {icon && (
+        <span className="border-l border-[#2C465D] group-hover:border-[#6495ED] flex items-center justify-center h-full ml-4 p-[5px_15px]">
+          {" "}
+          {icon}
+        </span>
+      )}
     </button>
   );
 };

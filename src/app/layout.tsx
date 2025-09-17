@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import {  Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import localFont from "next/font/local";
-
 
 import "./globals.css";
 

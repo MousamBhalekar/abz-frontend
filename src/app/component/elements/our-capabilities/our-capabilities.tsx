@@ -20,10 +20,7 @@ export const OurCapabilities: React.FC<OurCapabilitiesProps> = ({
           <h2 className="text-2xl font-bold mb-4">{title}</h2>
           <ul className="space-y-3">
             {items.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex items-center gap-2 text-gray-700"
-              >
+              <li key={idx} className="flex items-center gap-2 text-gray-700">
                 <span className="h-2 w-2 bg-blue-500 rounded-full"></span>
                 {item}
               </li>
