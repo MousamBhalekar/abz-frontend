@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${urbanistSans.className} ${gilgan.variable}  antialiased`}
+        className={`${urbanistSans.className} ${gilgan.variable} antialiased min-h-screen flex flex-col`}
       >
-        {children}
+        <main className="flex-grow">
+          {children}
+        </main>
       </body>
     </html>
   );

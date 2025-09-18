@@ -7,7 +7,7 @@ export const Header = () => {
       <nav className="border-b border-[#ffffff1a]">
         <div className="flex items-center justify-between  m-auto px-[75px] py-[15px]">
           <div className="flex items-center justify-between ">
-            <div className="pr-[45px] ">
+            <div className="pr-[45px] border-[#ffffff33] border-r-[0.5px]">
               <Link href=""><img src="/assets/logo.png" className="w-[250px]" /></Link>
             </div>
             <div className="pl-[45px]">

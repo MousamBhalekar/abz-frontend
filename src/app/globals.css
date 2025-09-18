@@ -1,5 +1,38 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 1rem;
+  overflow-y: scroll;
+}
+
+/* Custom scrollbar for a more refined look */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.5);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(155, 155, 155, 0.8);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Add smooth transitions for elements */
+* {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,6 +57,26 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-urbanist-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth reveal animation for sections */
+.container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: floatIn 0.8s ease-out forwards;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1,
@@ -32,4 +85,25 @@ h3,
 h4,
 h5 {
   font-family: var(--font-gilgan);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @variant sm {
+    max-width: 700px;   /* was 640px */
+  }
+  @variant md {
+    max-width: 900px;   /* was 768px */
+  }
+  @variant lg {
+    max-width: 1200px;  /* was 1024px */
+  }
+  @variant xl {
+    max-width: 1500px;  /* was 1280px */
+  }
+  @variant 2xl {
+    max-width: 1800px;  /* was 1536px */
+  }
 }

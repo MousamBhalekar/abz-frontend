@@ -45,7 +45,7 @@ export const LogoListSection: React.FC<LogoListSectionProps> = ({
   }, [activeIndex]);
 
   return (
-    <div className="flex flex-col items-center justify-center  border-t border-[#ffffff3d]">
+    <div className="flex flex-col items-center justify-center bg-black border-[#ffffff3d]">
       <div className="text-center py-[75px] container">
         <p className="text-white text-[20px] mb-[45px]">{subtitle}</p>
         <ul className="flex justify-center  ">

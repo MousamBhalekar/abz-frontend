@@ -12,7 +12,7 @@ export const OurCaseStudy: React.FC<OurCaseStudyProps> = ({
   title,
 }) => {
   return (
-    <div className="flex items-center justify-center relative">
+    <div className="flex items-center justify-center relative bg-gradient-to-t from-transparent via-transparent to-[#000]">
       <div className="py-[75px] container">
         <h2 className="text-5xl">{title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-10">
@@ -40,12 +40,12 @@ export const OurCaseStudy: React.FC<OurCaseStudyProps> = ({
           </div>
         </div>
       </div>
-      <div className="object-cover absolute left-0 -bottom-40">
+      {/* <div className="object-cover absolute left-0 -bottom-40">
         <div className="relative">
           <Image src={'/assets/filler-1.png'} width={180} height={180} alt="case-study-1" className=""/>
           <div className="absolute inset-0 mix-blend-luminosity"></div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

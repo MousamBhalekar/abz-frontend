@@ -16,7 +16,7 @@ export const OurCapabilities: React.FC<OurCapabilitiesProps> = ({
 }) => {
   const [activeIdx, setActiveIdx] = useState(0);
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center bg-[#000]">
       <div className="py-[75px] container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
@@ -28,7 +28,7 @@ export const OurCapabilities: React.FC<OurCapabilitiesProps> = ({
                 <li
                   key={idx}
                   onClick={() => setActiveIdx(idx)}
-                  className={`flex items-center cursor-pointer w-fit gap-2 text-4xl transition-colors duration-200
+                  className={`flex items-center cursor-pointer w-fit gap-2 text-4xl duration-200 transition-all
                     ${activeIdx === idx ? "text-white font-bold" : "text-gray-700"}
                   `}
                 >
