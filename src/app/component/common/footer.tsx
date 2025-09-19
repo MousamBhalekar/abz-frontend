@@ -16,13 +16,13 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="w-full bg-black text-white mt-20 relative overflow-hidden">
-      <div className="container mx-auto pt-16 px-4">
+    <footer className="w-full bg-black text-white mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden">
+      <div className="container mx-auto pt-8 sm:pt-12 md:pt-16 px-4">
         {/* Logo */}
-        <Image src={'/assets/text-footer.png'} width={500} height={500} className="w-[339px] py-8 -ml-1" alt="logo" />
+        <Image src={'/assets/text-footer.png'} width={500} height={500} className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[339px] py-4 sm:py-6 lg:py-8 -ml-1" alt="logo" />
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 justify-between">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 justify-between">
           {/* Location Section */}
           <div className="flex flex-col justify-between">
             <div>
@@ -175,26 +175,26 @@ function Footer() {
 
               CONTACT FORM
             </h3>
-            <form className="space-y-4">
+            <form className="space-y-3 sm:space-y-4">
               <div>
                 <input
                   type="text"
                   placeholder="Full Name*"
-                  className="w-full bg-transparent border border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-gray-500"
+                  className="w-full bg-transparent border border-gray-700 rounded p-2 sm:p-3 text-xs sm:text-sm focus:outline-none focus:border-gray-500"
                 />
               </div>
               <div>
                 <input
                   type="email"
                   placeholder="Email*"
-                  className="w-full bg-transparent border border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-gray-500"
+                  className="w-full bg-transparent border border-gray-700 rounded p-2 sm:p-3 text-xs sm:text-sm focus:outline-none focus:border-gray-500"
                 />
               </div>
               <div>
                 <textarea
                   placeholder="Message*"
-                  rows={4}
-                  className="w-full bg-transparent border border-gray-700 rounded p-2 text-sm resize-none focus:outline-none focus:border-gray-500"
+                  rows={3}
+                  className="w-full bg-transparent border border-gray-700 rounded p-2 sm:p-3 text-xs sm:text-sm resize-none focus:outline-none focus:border-gray-500"
                 ></textarea>
               </div>
             </form>

@@ -33,6 +33,87 @@ html {
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
+/* Custom mobile touch feedback */
+@media (hover: none) and (pointer: coarse) {
+  .touch-feedback {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .touch-feedback::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(100, 149, 237, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .touch-feedback:active::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Floating animation for mobile elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse glow effect */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(100, 149, 237, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(100, 149, 237, 0.6), 0 0 60px rgba(100, 149, 237, 0.4); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Slide in from bottom animation for mobile */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Stagger animation delays for lists */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Enhanced mobile scrollbar */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6495ED, #4169E1);
+    border-radius: 2px;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -93,17 +174,22 @@ h5 {
 
   @variant sm {
     max-width: 700px;   /* was 640px */
+    padding-inline: 1.5rem;
   }
   @variant md {
     max-width: 900px;   /* was 768px */
+    padding-inline: 2rem;
   }
   @variant lg {
     max-width: 1200px;  /* was 1024px */
+    padding-inline: 2.5rem;
   }
   @variant xl {
     max-width: 1500px;  /* was 1280px */
+    padding-inline: 3rem;
   }
   @variant 2xl {
     max-width: 1800px;  /* was 1536px */
+    padding-inline: 4rem;
   }
 }
