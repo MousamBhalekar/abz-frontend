@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Header } from "./component/common/header";
 import { Container } from "./component/elements/container/container";
-import { HeroBanner } from "./component/elements/hero-banner/hero-banner";
 import { LogoListSection } from "./component/elements/logo-section/logolist";
 import { OurCapabilities } from "./component/elements/our-capabilities/our-capabilities";
 import { OurCaseStudy } from "./component/elements/our-case-studies/our-case-studies";
 import { IndustriesWeServe } from "./component/elements/industries-we-serve/industries-we-serve";
 import Footer from "./component/common/footer";
+import { HeroBanner } from "./component/elements/hero-banner/hero-banner";
 
 export default function Home() {
   const logoslist = [

@@ -30,7 +30,7 @@ export const Header = () => {
           <div className="flex items-center justify-between m-auto px-4 sm:px-8 md:px-12 lg:px-[75px] py-[15px]">
             <div className="flex items-center justify-between">
               <div className="pr-2 sm:pr-4 md:pr-8 lg:pr-[45px] border-[#ffffff33] border-r-[0.5px]">
-                <Link href=""><img src="/assets/logo.png" className={`transition-all duration-300 ${
+                <Link href="/"><img src="/assets/logo.png" className={`transition-all duration-300 ${
                   isScrolled 
                     ? 'w-[100px] sm:w-[120px] md:w-[150px] lg:w-[200px]' 
                     : 'w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px]'
@@ -103,8 +103,8 @@ export const Header = () => {
             <nav className="flex-1 px-6 py-8">
               <ul className="space-y-6">
                 {[
-                  { name: 'Home', href: '', active: true },
-                  { name: 'Capabilities', href: '' },
+                  { name: 'Home', href: '/', active: true },
+                  { name: 'Capabilities', href: '/capabilities' },
                   { name: 'Industries', href: '' },
                   { name: 'About us', href: '' },
                   { name: 'Case Studies', href: '' },

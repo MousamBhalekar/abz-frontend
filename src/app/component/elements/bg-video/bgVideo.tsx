@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const BGVideo = () => {
   return (
     <div className="fixed inset-0 w-full h-full  m-auto">
