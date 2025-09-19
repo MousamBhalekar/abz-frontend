@@ -1,0 +1,18 @@
+<svg width="1800" height="690" viewBox="0 0 1800 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M100.25 0L100.25 690" stroke="#2C465D"/>
+<line x1="0.75" y1="2.11204e-08" x2="0.749969" y2="690" stroke="#2C465D"/>
+<line x1="1799.5" y1="1" x2="1799.5" y2="690" stroke="#2C465D"/>
+<line x1="1699.5" y1="1" x2="1699.5" y2="689" stroke="#2C465D"/>
+<path d="M0 0.5H1800" stroke="#2C465D"/>
+<line y1="90.5" x2="1799" y2="90.5" stroke="#2C465D"/>
+<line y1="599.5" x2="1799" y2="599.5" stroke="#2C465D"/>
+<line y1="689.5" x2="1799" y2="689.5" stroke="#2C465D"/>
+<line x1="90" y1="90.5189" x2="110" y2="90.5189" stroke="white"/>
+<line x1="100.5" y1="81" x2="100.5" y2="101.038" stroke="white"/>
+<line x1="90" y1="599.481" x2="110" y2="599.481" stroke="white"/>
+<line x1="100.5" y1="589.962" x2="100.5" y2="610" stroke="white"/>
+<line x1="1689" y1="90.5189" x2="1709" y2="90.5189" stroke="white"/>
+<line x1="1699.5" y1="81" x2="1699.5" y2="101.038" stroke="white"/>
+<line x1="1689" y1="599.481" x2="1709" y2="599.481" stroke="white"/>
+<line x1="1699.5" y1="589.962" x2="1699.5" y2="610" stroke="white"/>
+</svg>

@@ -26,7 +26,7 @@ export const Header = () => {
           ? 'backdrop-blur-[20px] bg-[#000000aa] shadow-lg' 
           : 'backdrop-blur-[10px] bg-[#00000047]'
       }`}>
-        <nav className="border-b border-[#ffffff1a]">
+        <nav className="border-b border-[#ffffff1a] h-[80px]">
           <div className="flex items-center justify-between m-auto px-4 sm:px-8 md:px-12 lg:px-[75px] py-[15px]">
             <div className="flex items-center justify-between">
               <div className="pr-2 sm:pr-4 md:pr-8 lg:pr-[45px] border-[#ffffff33] border-r-[0.5px]">
@@ -38,8 +38,8 @@ export const Header = () => {
               </div>
               <div className="hidden md:block pl-2 sm:pl-4 md:pl-8 lg:pl-[45px]">
                 <ul className="flex">
-                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#fff] hover:text-[#6495ED] transition-colors duration-300"><Link href="">Home</Link></li>
-                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="">Capabilities</Link></li>
+                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#fff] hover:text-[#6495ED] transition-colors duration-300"><Link href="/">Home</Link></li>
+                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="/capabilities">Capabilities</Link></li>
                   <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="">Industries</Link></li>
                   <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="">About us</Link></li>
                   <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="">Case Studies</Link></li>

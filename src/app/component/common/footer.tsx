@@ -16,7 +16,7 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="w-full bg-black text-white mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden">
+    <footer className="w-full bg-black text-white relative overflow-hidden">
       <div className="container mx-auto pt-8 sm:pt-12 md:pt-16 px-4">
         {/* Logo */}
         <Image src={'/assets/text-footer.png'} width={500} height={500} className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[339px] py-4 sm:py-6 lg:py-8 -ml-1" alt="logo" />
