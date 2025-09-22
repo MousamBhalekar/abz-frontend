@@ -3,18 +3,21 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Button } from "../atoms/button";
 
 function Footer() {
   const [x, setX] = useState(0);
   const pathname = usePathname();
 
-  // Footer navigation items configuration
+  // Footer navigation items configuration - matching header
   const footerNavigationItems = [
+    { name: 'Home', href: '/' },
     { name: 'Capabilities', href: '/capabilities' },
     { name: 'Industries', href: '/industries' },
-    { name: 'Product Development', href: '/Product-Development' },
-    { name: 'Marketing Technology', href: '/Marketing-Technology' },
-    { name: 'AI Solutions', href: '/Artificial-Intelligence' },
+    { name: 'Product Development', href: '/product-development' },
+    { name: 'Marketing Technology', href: '/marketing-technology' },
+    { name: 'AI Solutions', href: '/artificial-intelligence' },
+    { name: 'About Us', href: '/about' },
   ];
 
   useEffect(() => {
@@ -223,6 +226,9 @@ function Footer() {
                   className="w-full bg-transparent border border-gray-700 rounded p-2 sm:p-3 text-xs sm:text-sm resize-none focus:outline-none focus:border-gray-500"
                 ></textarea>
               </div>
+              <button className="flex justify-center mt-5 w-full border border-[#6495ED]/50 hover:border-[#6495ED] transition-all duration-300 hover:bg-[#6495ED]/10 cursor-pointer px-5 py-3">
+                Submit
+              </button>
             </form>
           </div>
         </div>
