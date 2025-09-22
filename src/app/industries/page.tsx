@@ -14,7 +14,7 @@ const industriesData: PageData = {
       count: "01",
       title: "Financial Services",
       description: "Transform your financial operations with our AI-powered solutions. From risk assessment to fraud detection, we help financial institutions leverage machine learning for better decision making and enhanced customer experiences.",
-      imageSrc: "/assets/ind-1.png",
+      imageSrc: "/assets/cap-01.png",
       imageAlt: "Financial Services",
       bg: "dark"
     },
@@ -22,7 +22,7 @@ const industriesData: PageData = {
       count: "02",
       title: "Healthcare & Life Sciences",
       description: "Revolutionize healthcare delivery with intelligent systems. Our AI solutions help healthcare providers improve patient outcomes, streamline operations, and accelerate medical research through advanced data analytics.",
-      imageSrc: "/assets/ind-2.png",
+      imageSrc: "/assets/cap-02.png",
       imageAlt: "Healthcare",
       bg: "light"
     },
@@ -30,7 +30,7 @@ const industriesData: PageData = {
       count: "03",
       title: "Manufacturing & Supply Chain",
       description: "Optimize your manufacturing processes and supply chain operations with predictive analytics and intelligent automation. Reduce costs, improve quality, and enhance operational efficiency through AI-driven insights.",
-      imageSrc: "/assets/ind-3.png",
+      imageSrc: "/assets/cap-03.png",
       imageAlt: "Manufacturing",
       bg: "dark"
     },
@@ -38,7 +38,7 @@ const industriesData: PageData = {
       count: "04",
       title: "Retail & E-commerce",
       description: "Enhance customer experiences and drive sales with personalized recommendations, inventory optimization, and demand forecasting. Our AI solutions help retailers stay competitive in the digital marketplace.",
-      imageSrc: "/assets/ind-4.png",
+      imageSrc: "/assets/cap-01.png",
       imageAlt: "Retail",
       bg: "light"
     }

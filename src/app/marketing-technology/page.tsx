@@ -5,7 +5,7 @@ import DynamicPage, { PageData } from "../component/elements/dynamic-page/dynami
 const marketingTechnologyData: PageData = {
   hero: {
     title: "Next-Gen Marketing Technology",
-    description: "Transform Your Marketing Strategy with AI-Driven Solutions and Intelligent Automation",
+    description: "Reliably training & governing AI by feeding high quality language & vision inputs",
     imageSrc: "/assets/bannerImage.png",
     btnText: "Explore Solutions"
   },
@@ -38,7 +38,7 @@ const marketingTechnologyData: PageData = {
       count: "04",
       title: "Intelligent Ad Optimization",
       description: "Optimize your advertising spend with AI-driven bid management and audience targeting. Our algorithms continuously learn and adjust campaigns in real-time to maximize performance across all channels.",
-      imageSrc: "/assets/cap-04.png",
+      imageSrc: "/assets/cap-01.png",
       imageAlt: "Ad Optimization",
       bg: "light"
     }

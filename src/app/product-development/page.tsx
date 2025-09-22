@@ -4,10 +4,10 @@ import DynamicPage, { PageData } from "../component/elements/dynamic-page/dynami
 // Product Development page data
 const productDevelopmentData: PageData = {
   hero: {
-    title: "AI-Powered Product Development",
-    description: "Accelerate Your Product Innovation with Intelligent Development Solutions",
+    title: "Product Development Company",
+    description: "Reliably training & governing AI by feeding high quality language & vision inputs",
     imageSrc: "/assets/bannerImage.png",
-    btnText: "Start Building"
+    btnText: "Contact Us"
   },
   sections: [
     {
@@ -38,7 +38,7 @@ const productDevelopmentData: PageData = {
       count: "04",
       title: "Intelligent Code Generation",
       description: "Accelerate development with AI-powered code generation tools. Our systems can generate boilerplate code, suggest optimizations, and even create entire modules based on specifications and best practices.",
-      imageSrc: "/assets/cap-04.png",
+      imageSrc: "/assets/cap-01.png",
       imageAlt: "Code Generation",
       bg: "light"
     }

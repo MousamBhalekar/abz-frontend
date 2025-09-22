@@ -14,9 +14,10 @@ export const Header = () => {
     { name: 'Home', href: '/' },
     { name: 'Capabilities', href: '/capabilities' },
     { name: 'Industries', href: '/industries' },
-    { name: 'Product Development', href: '/Product-Development' },
-    { name: 'Marketing Tech', href: '/Marketing-Technology' },
-    { name: 'AI Solutions', href: '/Artificial-Intelligence' },
+    { name: 'Product Development', href: '/product-development' },
+    { name: 'Marketing Technology', href: '/marketing-technology' },
+    { name: 'AI Solutions', href: '/artificial-intelligence' },
+    { name: 'About Us', href: '/about' },
   ];
 
   useEffect(() => {

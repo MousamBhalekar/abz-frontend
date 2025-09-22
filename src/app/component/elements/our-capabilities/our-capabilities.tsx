@@ -4,7 +4,7 @@ import React, { useState } from "react";
 type OurCapabilitiesProps = {
   title: string;
   desc: string;
-  items: string[];
+  items: {title: string, href: string}[];
   rightContent?: React.ReactNode; // e.g., image, illustration, etc.
 };
 
@@ -41,7 +41,7 @@ export const OurCapabilities: React.FC<OurCapabilitiesProps> = ({
                   
                   {/* Text with hover effects */}
                   <span className="relative">
-                    {item}
+                    {item.title}
                     {/* Underline animation */}
                     <div className={`absolute -bottom-1 left-0 h-0.5 bg-[#6495ED] transition-all duration-500 ${
                       activeIdx === idx ? 'w-full' : 'w-0 group-hover:w-full'

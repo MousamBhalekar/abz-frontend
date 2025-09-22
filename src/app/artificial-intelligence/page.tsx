@@ -4,10 +4,10 @@ import DynamicPage, { PageData } from "../component/elements/dynamic-page/dynami
 // Artificial Intelligence page data
 const artificialIntelligenceData: PageData = {
   hero: {
-    title: "Advanced Artificial Intelligence Solutions",
-    description: "Harness the Power of AI to Transform Your Business Operations and Drive Innovation",
+    title: "AI Development Company",
+    description: "Reliably training & governing AI by feeding high quality language & vision inputs",
     imageSrc: "/assets/bannerImage.png",
-    btnText: "Discover AI"
+    btnText: "Contact Us"
   },
   sections: [
     {
@@ -30,7 +30,7 @@ const artificialIntelligenceData: PageData = {
       count: "04",
       title: "AI Strategy & Consulting",
       description: "Navigate your AI transformation journey with expert guidance. We help you identify AI opportunities, develop implementation roadmaps, and establish governance frameworks for responsible AI deployment.",
-      imageSrc: "/assets/cap-04.png",
+      imageSrc: "/assets/cap-01.png",
       imageAlt: "AI Strategy",
       bg: "light"
     }

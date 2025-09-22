@@ -60,10 +60,9 @@ function CapabilitiesBanner({
           {/* Mobile Layout (stacked) */}
           <div className="flex flex-col lg:hidden items-center justify-center h-full px-4 sm:px-6 md:px-8 text-center mt-16 md:mt-0">
             <div className="text-white max-w-2xl">
-              <div className="relative mb-6 sm:mb-8">
-                <h1 className="text-[28px] sm:text-[36px] md:text-[44px] leading-[32px] sm:leading-[40px] md:leading-[48px] text-white relative z-10 transition-all duration-1000 animate-fade-in-up">
-                  Transforming <br className="sm:hidden" />
-                  <span className="sm:inline">Fintech Through AI</span>
+              <div className="relative mb-6 sm:mb-8 flex flex-col items-center justify-center">
+                <h1 className="text-[28px] sm:text-[36px] md:text-[44px] leading-[32px] sm:leading-[40px] md:leading-[48px] text-white relative z-10 transition-all duration-1000 animate-fade-in-up w-5/6 text-center">
+                  {title}
                 </h1>
                 <p className="text-base sm:text-lg text-gray-300 mt-4 sm:mt-5 animate-fade-in-up delay-200">
                   {description}
@@ -96,8 +95,8 @@ function CapabilitiesBanner({
           <div className="hidden lg:flex items-center justify-between h-full">
             <div className="text-left text-white w-1/2 pl-8 xl:pl-36">
               <div className="relative">
-                <h1 className="text-[32px] xl:text-[60px] lg:text-[50px] leading-[38px] xl:leading-[70px] lg:leading-[58px] text-white relative z-10 transition-all duration-1000 animate-fade-in-up">
-                  Transforming <br/> Fintech Through AI
+                <h1 className="text-[32px] xl:text-[60px] lg:text-[50px] leading-[38px] xl:leading-[70px] lg:leading-[58px] text-white relative z-10 transition-all duration-1000 animate-fade-in-up w-2/3">
+                  {title}
                 </h1>
                 <p className="text-lg xl:text-xl text-gray-300 mt-5 w-2/3 animate-fade-in-up delay-200">
                   {description}
