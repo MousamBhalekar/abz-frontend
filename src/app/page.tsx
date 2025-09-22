@@ -35,11 +35,11 @@ export default function Home() {
           <OurCapabilities
             title="Our Capabilities"
             items={[
-              "Data",
-              "AI & Machine Learning",
-              "Data Engineering",
-              "Cloud Solutions",
-              "Computer Vision",
+              {title: "Data", href: "/data"},
+              {title: "Artificial Intelligence", href: "/artificial-intelligence"},
+              {title: "Fintech", href: "/industries"},
+              {title: "Marketing Technology", href: "/marketing-technology"},
+              {title: "Product Development", href: "/product-development"}
             ]}
             desc="Harness our Data, AI, and Technology solutions to optimize operations, improve efficiency, and drive business transformation"
             rightContent={

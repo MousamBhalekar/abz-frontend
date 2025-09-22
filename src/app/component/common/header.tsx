@@ -1,11 +1,24 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "../atoms/button";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  // Navigation items configuration
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Capabilities', href: '/capabilities' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Product Development', href: '/product-development' },
+    { name: 'Marketing Technology', href: '/marketing-technology' },
+    { name: 'AI Solutions', href: '/artificial-intelligence' },
+    { name: 'About Us', href: '/about' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,11 +51,23 @@ export const Header = () => {
               </div>
               <div className="hidden md:block pl-2 sm:pl-4 md:pl-8 lg:pl-[45px]">
                 <ul className="flex">
-                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#fff] hover:text-[#6495ED] transition-colors duration-300"><Link href="/">Home</Link></li>
-                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="/capabilities">Capabilities</Link></li>
-                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="">Industries</Link></li>
-                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="">About us</Link></li>
-                  <li className="p-[0px_8px] lg:p-[0px_15px] text-[#979797] hover:text-[#fff] transition-colors duration-300"><Link href="">Case Studies</Link></li>
+                  {navigationItems.map((item) => {
+                    const isActive = pathname === item.href;
+                    return (
+                      <li key={item.name} className="p-[0px_8px] lg:p-[0px_15px]">
+                        <Link 
+                          href={item.href}
+                          className={`transition-colors duration-300 ${
+                            isActive 
+                              ? 'text-[#6495ED]' 
+                              : 'text-[#979797] hover:text-[#fff]'
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -102,30 +127,27 @@ export const Header = () => {
             {/* Navigation */}
             <nav className="flex-1 px-6 py-8">
               <ul className="space-y-6">
-                {[
-                  { name: 'Home', href: '/', active: true },
-                  { name: 'Capabilities', href: '/capabilities' },
-                  { name: 'Industries', href: '' },
-                  { name: 'About us', href: '' },
-                  { name: 'Case Studies', href: '' },
-                ].map((item, index) => (
-                  <li key={item.name} className={`transform transition-all duration-500 delay-${index * 100}`} style={{
-                    transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(100px)',
-                    opacity: isMobileMenuOpen ? 1 : 0
-                  }}>
-                    <Link 
-                      href={item.href}
-                      className={`block text-xl py-3 px-4 rounded-lg transition-all duration-300 ${
-                        item.active 
-                          ? 'text-[#6495ED] bg-[#6495ED]/10 border border-[#6495ED]/20' 
-                          : 'text-[#979797] hover:text-white hover:bg-[#ffffff0a]'
-                      }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
+                {navigationItems.map((item, index) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <li key={item.name} className={`transform transition-all duration-500 delay-${index * 100}`} style={{
+                      transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(100px)',
+                      opacity: isMobileMenuOpen ? 1 : 0
+                    }}>
+                      <Link 
+                        href={item.href}
+                        className={`block text-xl py-3 px-4 rounded-lg transition-all duration-300 ${
+                          isActive 
+                            ? 'text-[#6495ED] bg-[#6495ED]/10 border border-[#6495ED]/20' 
+                            : 'text-[#979797] hover:text-white hover:bg-[#ffffff0a]'
+                        }`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
             
